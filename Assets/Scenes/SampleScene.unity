@@ -812,6 +812,7 @@ MonoBehaviour:
   _redPresentsLabel: {fileID: 268204213}
   _greenPresentsLabel: {fileID: 1965039340}
   _bluePresentsLabel: {fileID: 268840866}
+  _uiGiftsColor: {fileID: 620539157}
 --- !u!4 &161218459 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2c1da8ab028d06843bdd09f2813355e7, type: 3}
@@ -2291,6 +2292,7 @@ GameObject:
   - component: {fileID: 620539154}
   - component: {fileID: 620539156}
   - component: {fileID: 620539155}
+  - component: {fileID: 620539157}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -2359,6 +2361,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620539153}
   m_CullTransparentMesh: 1
+--- !u!114 &620539157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620539153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b250afa49d517f43823df79ac5ba079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &676566976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4016,7 +4030,6 @@ GameObject:
   - component: {fileID: 1230041135}
   - component: {fileID: 1230041137}
   - component: {fileID: 1230041136}
-  - component: {fileID: 1230041138}
   m_Layer: 5
   m_Name: PresentRed
   m_TagString: Untagged
@@ -4057,7 +4070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7584905, g: 0.50232106, b: 0.50232106, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4082,18 +4095,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230041134}
   m_CullTransparentMesh: 1
---- !u!114 &1230041138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230041134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b250afa49d517f43823df79ac5ba079, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1234020805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4641,7 +4642,7 @@ MonoBehaviour:
   _player: {fileID: 551841498}
   _scoreBoard: {fileID: 155817739}
   _inputController: {fileID: 551841503}
-  _uiGiftsColor: {fileID: 1230041138}
+  _uiGiftsColor: {fileID: 620539157}
 --- !u!1 &1437756161
 GameObject:
   m_ObjectHideFlags: 0
