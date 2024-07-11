@@ -1,9 +1,14 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GiftsManager : MonoBehaviour
 {
+    public event Action<Color> CountColors;
+    public event Action<Color> DestroyEvent;
+    
     [SerializeField] private Gift _giftPrefab;
     [SerializeField] private int _giftsCount = 6;
 
@@ -25,6 +30,10 @@ public class GiftsManager : MonoBehaviour
 
             var color = colorsProvider.GetColor();
             _currentGift.Initialize(color);
+            
+            CountColors?.Invoke(color);
+
+            _currentGift.GiftDestroy += OnGiftDestroy;
         }
     }
     
@@ -50,5 +59,10 @@ public class GiftsManager : MonoBehaviour
     private bool IsPositionAvailable(Vector3 position)
     {
         return SpawnedPositions.Any(pos => Vector3.Distance(pos, position) < _giftRadius * 2);
+    }
+
+    private void OnGiftDestroy(Color color)
+    {
+        DestroyEvent?.Invoke(color);
     }
 }

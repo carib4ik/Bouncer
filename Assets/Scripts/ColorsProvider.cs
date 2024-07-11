@@ -12,4 +12,9 @@ public class ColorsProvider
         var index = Random.Range(0, _colors.Length);        
         return _colors[index];
     }
+
+    public Color[] GetAllColors()
+    {
+        return _colors;
+    }
 }

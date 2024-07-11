@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Gift : MonoBehaviour
 {
+    public event Action<Color> GiftDestroy;
+    
     private Player _player;
     private Color _color;
     private Collider _collider;
@@ -30,6 +32,7 @@ public class Gift : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            GiftDestroy?.Invoke(_color);
             _player.HatColorChange -= SwitchKineticMode;
             Destroy(gameObject);
         } 

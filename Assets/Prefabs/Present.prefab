@@ -183,6 +183,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5693ce32cb4b6c972f6ef1a7165df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GiftDestroy:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1047778736497914198
 BoxCollider:
   m_ObjectHideFlags: 0
